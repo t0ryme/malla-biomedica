@@ -1,1 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Winky+Rough&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #CFEAFB; /* Celeste pastel */
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Winky Rough', cursive;
+  text-align: center;
+  color: #8C4F96;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.semestre {
+  background-color: #ffffffcc;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.semestre h2 {
+  font-family: 'Winky Rough', cursive;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #6C3483;
+}
+
+.ramo {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #FADCE6; /* Rosado pastel */
+  color: #4a4a4a;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s, transform 0.2s;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.ramo:hover:not(.locked) {
+  background-color: #F79AC0; /* Rosado más fuerte */
+  transform: translateY(-2px);
+}
+
+.ramo.locked {
+  background-color: #D8C4E6; /* Malva pastel */
+  color: #888;
+  cursor: not-allowed;
+}
+
+.ramo.approved {
+  background-color: #F6B3D0; /* Rosado intermedio */
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 0 0 2px #e89bb8;
+}
 
