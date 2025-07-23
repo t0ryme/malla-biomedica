@@ -1,16 +1,13 @@
-/* Importar fuentes desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100;400&family=Winky+Rough&display=swap');
 
-/* Estilo general */
 body {
   font-family: 'Playwrite AU QLD', sans-serif;
   background-color: #CFEAFB; /* celeste pastel */
-  color: #333;
+  color: #2e2e2e; /* texto general gris oscuro para buen contraste */
   margin: 0;
   padding: 2rem;
 }
 
-/* Título principal */
 h1 {
   font-family: 'Playwrite AU QLD', sans-serif;
   text-align: center;
@@ -19,22 +16,19 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Cuadrícula de semestres */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
 }
 
-/* Estilo de cada semestre */
 .semestre {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Título de semestre */
 .semestre h2 {
   font-family: 'Playwrite AU QLD', sans-serif;
   font-size: 1.4rem;
@@ -42,7 +36,6 @@ h1 {
   color: #6C3483;
 }
 
-/* Estilo de los ramos (botones) */
 .ramo {
   font-family: 'Winky Rough', cursive;
   display: block;
@@ -52,30 +45,27 @@ h1 {
   border: none;
   border-radius: 12px;
   background-color: #FADCE6; /* rosado pastel */
-  color: #4a4a4a;
+  color: #4a4a4a; /* texto gris medio para buen contraste */
   cursor: pointer;
   text-align: left;
   transition: background-color 0.3s, transform 0.2s;
   font-size: 0.95rem;
 }
 
-/* Hover de ramos desbloqueados */
 .ramo:hover:not(.locked) {
   background-color: #F79AC0; /* rosado más fuerte */
   transform: translateY(-2px);
 }
 
-/* Ramos bloqueados */
 .ramo.locked {
   background-color: #D8C4E6; /* malva pastel */
-  color: #888;
+  color: #5a4a7d; /* morado grisáceo para texto en bloqueados */
   cursor: not-allowed;
 }
 
-/* Ramos aprobados */
 .ramo.approved {
   background-color: #F6B3D0; /* rosado intermedio */
-  color: #fff;
+  color: #fff; /* blanco para texto aprobado */
   font-weight: bold;
   box-shadow: 0 0 0 2px #e89bb8;
 }
