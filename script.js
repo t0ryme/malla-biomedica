@@ -25,26 +25,85 @@ const ramos = [
    { id: "A.L", nombre:
   
   
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Curricular</title>
+const mallaContainer = document.getElementById("malla");
 
-  <!-- Fuentes desde Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100;400&family=Winky+Rough&display=swap" rel="stylesheet">
+// Guarda qué ramos están aprobados
+const aprobados = new Set();
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
-  <h1>Malla Curricular</h1>
+function puedeAprobar(ramo) {
+  // Si todos los requisitos están aprobados, se puede aprobar
+  return ramo.requisitos.every(r => aprobados.has(r));
+}
 
-  <!-- Contenedor de la malla -->
-  <div id="malla" class="grid"></div>
+function crearBotonRamo(ramo) {
+  const btn = document.createElement("button");
+  btn.textContent = `${ramo.nombre} (${ramo.semestre})`;
+  btn.className = "ramo";
 
-  <!-- Script funcional -->
-  <script src="script.js"></script>
-</body>
-</html>
+  if (!puedeAprobar(ramo)) {
+    btn.classList.add("locked");
+    btn.disabled = true;
+  }
+
+  btn.addEventListener("click", () => {
+    if (btn.classList.contains("approved")) {
+      aprobados.delete(ramo.id);
+      btn.classList.remove("approved");
+    } else {
+      if (puedeAprobar(ramo)) {
+        aprobados.add(ramo.id);
+        btn.classList.add("approved");
+      }
+    }
+    actualizarEstado();
+  });
+
+  return btn;
+}
+
+function actualizarEstado() {
+  // Recorremos todos los botones para habilitar/deshabilitar según requisitos
+  const botones = mallaContainer.querySelectorAll("button.ramo");
+  botones.forEach(btn => {
+    const ramo = ramos.find(r => btn.textContent.startsWith(r.nombre));
+    if (ramo) {
+      if (puedeAprobar(ramo)) {
+        btn.disabled = false;
+        btn.classList.remove("locked");
+      } else {
+        if (!aprobados.has(ramo.id)) {
+          btn.disabled = true;
+          btn.classList.add("locked");
+          btn.classList.remove("approved");
+        }
+      }
+    }
+  });
+}
+
+function cargarMalla() {
+  // Agrupamos ramos por semestre
+  const semestres = {};
+  ramos.forEach(r => {
+    if (!semestres[r.semestre]) semestres[r.semestre] = [];
+    semestres[r.semestre].push(r);
+  });
+
+  for (const semestre in semestres) {
+    const divSem = document.createElement("div");
+    divSem.className = "semestre";
+    const h2 = document.createElement("h2");
+    h2.textContent = `Semestre ${semestre}`;
+    divSem.appendChild(h2);
+
+    semestres[semestre].forEach(ramo => {
+      const boton = crearBotonRamo(ramo);
+      divSem.appendChild(boton);
+    });
+
+    mallaContainer.appendChild(divSem);
+  }
+}
+
+cargarMalla();
+actualizarEstado();
