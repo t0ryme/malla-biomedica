@@ -16,13 +16,20 @@ const ramos = [
   { id: "F.F", nombre: "Fundamentos de física", semestre: "2º", requisitos: []},
   { id: "C.D", nombre: "Cálculo diferencial", semestre: "2º", requisitos: ["F.M"]},
   { id: "A", nombre: "Álgebra", semestre: "2º", requisitos: ["F.M"]},
-  { id: "I.I.E", nombre: "Ingeniería, innovación y emprendimiento", semestre "2º", requisitos: ["D.I"]},
+  { id: "I.I.E", nombre: "Ingeniería, innovación y emprendimiento", semestre: "2º", requisitos: ["D.I"]},
   { id: "P", nombre: "Programación", semestre "2º", requisitos: ["F.P"]},
 
    /* SEGUNDO AÑO */
    /* 3º semestre */
    { id: "C.I.S", nombre: "Cálculo integral y series", semestre: "3º", requisitos: ["C.D"]},
-   { id: "A.L", nombre:
+   { id: "A.L", nombre: "Álgebra lineal", semestre: "3º", requisitos: ["A"]},
+   { id: "F.M", nombre: "Física mecánica", semestre: "3º", requisitos: ["F.F","C.D"]},
+   { id: "G.D", nombre: "Gestión de datos de salud", semestre "3º", requisitos: ["F.P"]},
+   { id: "B.C", nombre: "Biología celular", semestre "3º", requisitos: []},
+   { id: "T.I", nombre: "Taller de integración perfil sello uv 1", semestre "3º", requisitos: ["F.P"]},
+
+   /* 4º semestre */
+   { id: "
   
   
 const mallaContainer = document.getElementById("malla");
