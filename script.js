@@ -24,12 +24,39 @@ const ramos = [
    { id: "C.I.S", nombre: "Cálculo integral y series", semestre: "3º", requisitos: ["C.D"]},
    { id: "A.L", nombre: "Álgebra lineal", semestre: "3º", requisitos: ["A"]},
    { id: "F.M", nombre: "Física mecánica", semestre: "3º", requisitos: ["F.F","C.D"]},
-   { id: "G.D", nombre: "Gestión de datos de salud", semestre "3º", requisitos: ["F.P"]},
-   { id: "B.C", nombre: "Biología celular", semestre "3º", requisitos: []},
-   { id: "T.I", nombre: "Taller de integración perfil sello uv 1", semestre "3º", requisitos: ["F.P"]},
+   { id: "G.D", nombre: "Gestión de datos de salud", semestre: "3º", requisitos: ["F.P"]},
+   { id: "B.C", nombre: "Biología celular", semestre: "3º", requisitos: []},
+   { id: "T.I", nombre: "Taller de integración perfil sello uv 1", semestre: "3º", requisitos: ["F.P"]},
 
    /* 4º semestre */
-   { id: "
+   { id: "CVV", nombre: "Cálculo en varias variables", semestre: "4º", requisitos: ["C.I.S","A.L"]},
+   { id: "EDO", nombre: "Ecuaciones diferenciales ordinarias", semestre: "4º", requisitos: ["C.I.S","A.L"]},
+   { id: "FE", nombre: "Física electromagnetismo", semestre: "4º", requisitos: ["C.I.S","F.M"]},
+   { id: "EC", nombre: "Estadística computacional", semestre: "4º", requisitos: ["F.P","C.D"]},
+   { id: "FS1", nombre: "Fisiología de sistemas I", semestre: "4º", requisitos: ["B.C"]},
+   { id: "I", nombre: "Inglés", semestre: "4º", requisitos: ["D.P"]},
+
+   /* TERCER AÑO */
+   /* 5º semestre */
+   { id: "EA", nombre: "Electrónica analógica", semestre: "5º", requisitos: ["EDO","FE"]},
+   { id: "LABEA", nombre: "Laboratorio de electrónica analógica", semestre: "5º", requisitos: ["EDO","FE"]},
+   { id: "FCO", nombre: "Física, calor y ondas", semestre: "5º", requisitos: ["C.I.S","F.M"]},
+   { id: "MNO", nombre: "Métodos numéricos y optimización", semestre: "5º", requisitos: ["A.L","G.D"]},
+   { id: "FS2", nombre: "Fisiología de sistemas II", semestre: "5º", requisitos: ["B.C"]},
+   { id: "TI2", nombre: "Taller de integración perfil sello uv 2", semestre: "5º", requisitos: ["G.D"]},
+
+   /* 6º semestre */
+   { id: "ED", nombre: "Electrónica digital", semestre: "6º", requisitos: ["F.P","EA"]},
+   { id: "LABED", nombre: "Laboratorio de electrónica digital", semestre "6º", requisitos: ["F.P","LABEA"]},
+   { id: "BM", nombre: "Mediciones biomédicas", semestre: "6º", requisitos: ["B.C","EA"]},
+   { id: "GI", nombre: "Gráfica en ingeniería", semestre: "6º", requisitos: ["F.M"]},
+   { id: "GOS", nombre: "Gestión de organizaciones de salud", semestre: "6º", requisitos: ["G.D"]},
+   { id: "SPSS", nombre: "Salud pública y sistemas de salud", semestre: "6º", requisitos: ["TI2","G.D"]},
+
+   /* CUARTO AÑO */
+   /* 7º semestre */
+   { id: "EM1", nombre: "Equipos médicos 1", semestre: "6º", requisitos: [" 
+   
   
   
 const mallaContainer = document.getElementById("malla");
