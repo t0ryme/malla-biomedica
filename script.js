@@ -55,7 +55,29 @@ const ramos = [
 
    /* CUARTO AÑO */
    /* 7º semestre */
-   { id: "EM1", nombre: "Equipos médicos 1", semestre: "6º", requisitos: [" 
+   { id: "EM1", nombre: "Equipos médicos 1", semestre: "7º", requisitos: ["EA","LABEA","FS2"]},
+   { id: "ICA", nombre: "Ingeniería de control automático", semestre: "7º", requisitos: ["EDO"]},
+   { id: "SYM", nombre: "Señales y sistemas", semestre: "7º", requisitos: ["EDO","EC","FS1"]},
+   { id: "RDYC", nombre: "Redes de datos y comunicaciones", semestre: "7º", requisitos: ["G.D"]},
+   { id: "ISH", nombre: "Ingeniería de seguridad hospitalaria", semestre: "7º", requisitos: ["EA"]},
+   { id: "GOPH", nombre: "Gestión de operaciones y procesos hospitalarios", semestre: "7º", requisitos: ["GOS"]},
+   { id: "P1", nombre: "Practica  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
   
   
