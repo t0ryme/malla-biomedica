@@ -1,8 +1,3 @@
-/* ------------------------------------------------------------------
-   MALLA ING. CIVIL BIOMEDICA – INTERACTIVA
-   Cada ramo se desbloquea cuando se aprueban TODOS sus requisitos.
--------------------------------------------------------------------*/
-
 const ramos = [
   /* PRIMER AÑO */
   { id: "D.P", nombre: "Desarrollo personal", semestre: "1º", requisitos: []},
@@ -83,8 +78,6 @@ const ramos = [
   { id: "P2", nombre: "Práctica II", semestre: "11º", requisitos: ["GOPH","P1","EM2","SIPS","ICALM"]}
 ];
 
-/* ------------------ LÓGICA ------------------- */
-
 const mallaContainer = document.getElementById("malla");
 const progresoContainer = document.getElementById("progreso");
 const resetBtn = document.getElementById("reset");
@@ -104,9 +97,8 @@ function crearBotonRamo(ramo) {
   btn.textContent = `${ramo.nombre} (${ramo.semestre})`;
   btn.className = "ramo";
 
-  if (aprobados.has(ramo.id)) {
-    btn.classList.add("approved");
-  } else if (!puedeAprobar(ramo)) {
+  if (aprobados.has(ramo.id)) btn.classList.add("approved");
+  else if (!puedeAprobar(ramo)) {
     btn.classList.add("locked");
     btn.disabled = true;
   }
@@ -119,7 +111,7 @@ function crearBotonRamo(ramo) {
       if (puedeAprobar(ramo)) {
         aprobados.add(ramo.id);
         btn.classList.add("approved");
-        btn.classList.add("pulse"); // animación
+        btn.classList.add("pulse");
         setTimeout(() => btn.classList.remove("pulse"), 500);
       }
     }
@@ -181,15 +173,11 @@ function cargarMalla() {
   actualizarEstado();
 }
 
-/* ---- Reset ---- */
 resetBtn.addEventListener("click", () => {
-  if (confirm("¿Seguro que quieres reiniciar la malla?")) {
-    aprobados.clear();
-    guardarProgreso();
-    mallaContainer.innerHTML = "";
-    cargarMalla();
-  }
+  aprobados.clear();
+  localStorage.removeItem("aprobados");
+  mallaContainer.innerHTML = "";
+  cargarMalla();
 });
 
-// Inicializar
 cargarMalla();
