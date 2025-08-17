@@ -47,8 +47,39 @@ const ramos = [
   { id: "GOS", nombre: "Gestión de organizaciones de salud", semestre: "6º", requisitos: ["G.D"]},
   { id: "SPSS", nombre: "Salud pública y sistemas de salud", semestre: "6º", requisitos: ["TI2","G.D"]},
 
-  /* (continúa con todos los demás ramos hasta el 11º semestre como ya los tienes) */
-  { id: "PDT", nombre: "Proyecto de titulo", semestre: "11º", requisitos: ["SIPS","TDI","ICALM","EPH","DDSBM"]},
+  /* CUARTO AÑO */
+  { id: "EM1", nombre: "Equipos médicos 1", semestre: "7º", requisitos: ["EA","LABEA","FS2"]},
+  { id: "ICA", nombre: "Ingeniería de control automático", semestre: "7º", requisitos: ["EDO"]},
+  { id: "SYM", nombre: "Señales y sistemas", semestre: "7º", requisitos: ["EDO","EC","FS1"]},
+  { id: "RDYC", nombre: "Redes de datos y comunicaciones", semestre: "7º", requisitos: ["G.D"]},
+  { id: "ISH", nombre: "Ingeniería de seguridad hospitalaria", semestre: "7º", requisitos: ["EA"]},
+  { id: "GOPH", nombre: "Gestión de operaciones y procesos hospitalarios", semestre: "7º", requisitos: ["GOS"]},
+  { id: "P1", nombre: "Práctica I", semestre: "7º", requisitos: ["EA","MNO","FS2"]},
+
+  { id: "EM2", nombre: "Equipos médicos 2", semestre: "8º", requisitos: ["EA","LABEA","FS2"]},
+  { id: "LABSE", nombre: "Laboratorio de sistemas embebidos", semestre: "8º", requisitos: ["LABEA","LABED","FCO"]},
+  { id: "PDIM", nombre: "Procesamiento digital de imágenes médicas", semestre: "8º", requisitos: ["SYM"]},
+  { id: "SIPS", nombre: "Sistemas de información para salud", semestre: "8º", requisitos: ["RDYC","GOPH"]},
+  { id: "ICYET", nombre: "Ingeniería clínica y evaluación de tecnologías", semestre: "8º", requisitos: ["GOS"]},
+  { id: "TDI", nombre: "Taller de integración", semestre: "8º", requisitos: ["BM"]},
+
+  /* QUINTO AÑO */
+  { id: "EM3", nombre: "Equipos médicos 3", semestre: "9º", requisitos: ["BM","FS2"]},
+  { id: "E1", nombre: "Electivo 1", semestre: "9º", requisitos: ["BM"]},
+  { id: "IAS", nombre: "Inteligencia artificial para la salud", semestre: "9º", requisitos: ["MNO"]},
+  { id: "GCT", nombre: "Gestión de calidad y tecnovigilancia", semestre: "9º", requisitos: ["SPSS","EC"]},
+  { id: "ICALM", nombre: "Ingeniería clínica aplicada y laboratorio de mantenimiento", semestre: "9º", requisitos: ["ISH","ICYET"]},
+  { id: "FYEDP", nombre: "Formulación y evaluación de proyectos", semestre: "9º", requisitos: ["GOS"]},
+
+  { id: "EM4", nombre: "Equipos médicos 4", semestre: "10º", requisitos: ["PDIM","SIPS"]},
+  { id: "DDSBM", nombre: "Diseño y desarrollo de soluciones biomédicas", semestre: "10º", requisitos: ["ICA","LABSE"]},
+  { id: "ESYTM", nombre: "E-salud y telemedicina", semestre: "10º", requisitos: ["SIPS"]},
+  { id: "E2", nombre: "Electivo 2", semestre: "10º", requisitos: ["GOPH"]},
+  { id: "E3", nombre: "Electivo 3", semestre: "10º", requisitos: ["BM"]},
+  { id: "EPH", nombre: "Estudio de preinversión hospitalaria", semestre: "10º", requisitos: ["EM1","ICYET","FYEDP"]},
+
+  /* SEXTO AÑO */
+  { id: "PDT", nombre: "Proyecto de título", semestre: "11º", requisitos: ["SIPS","TDI","ICALM","EPH","DDSBM"]},
   { id: "P2", nombre: "Práctica II", semestre: "11º", requisitos: ["GOPH","P1","EM2","SIPS","ICALM"]}
 ];
 
