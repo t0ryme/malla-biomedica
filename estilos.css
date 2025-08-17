@@ -2,8 +2,8 @@
 
 body {
   font-family: 'Playwrite AU QLD', sans-serif;
-  background-color: #CFEAFB; /* celeste pastel */
-  color: #2e2e2e; /* texto general gris oscuro para buen contraste */
+  background-color: #CFEAFB;
+  color: #2e2e2e;
   margin: 0;
   padding: 2rem;
 }
@@ -44,8 +44,8 @@ h1 {
   padding: 0.8rem 1rem;
   border: none;
   border-radius: 12px;
-  background-color: #FADCE6; /* rosado pastel */
-  color: #4a4a4a; /* texto gris medio para buen contraste */
+  background-color: #FADCE6;
+  color: #4a4a4a;
   cursor: pointer;
   text-align: left;
   transition: background-color 0.3s, transform 0.2s;
@@ -53,19 +53,50 @@ h1 {
 }
 
 .ramo:hover:not(.locked) {
-  background-color: #F79AC0; /* rosado más fuerte */
+  background-color: #F79AC0;
   transform: translateY(-2px);
 }
 
 .ramo.locked {
-  background-color: #D8C4E6; /* malva pastel */
-  color: #5a4a7d; /* morado grisáceo para texto en bloqueados */
+  background-color: #D8C4E6;
+  color: #5a4a7d;
   cursor: not-allowed;
 }
 
 .ramo.approved {
-  background-color: #F6B3D0; /* rosado intermedio */
-  color: #fff; /* blanco para texto aprobado */
+  background-color: #F6B3D0;
+  color: #fff;
   font-weight: bold;
   box-shadow: 0 0 0 2px #e89bb8;
+}
+
+.pulse {
+  animation: pulseAnim 0.4s;
+}
+
+@keyframes pulseAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+#progreso {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#reset {
+  background: #8C4F96;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#reset:hover {
+  background: #6c3970;
 }
